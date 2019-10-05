@@ -53,6 +53,7 @@ $route['default_controller'] = 'home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['contact'] = 'home/contact';
+$route['auth'] = 'Auth/check_login';
 $route['client/login'] = 'dashboard';
 $route['client/dashboard'] = 'dashboard/home';
 $route['client/dashboard/invoice'] = 'dashboard/invoice';

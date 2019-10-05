@@ -71,16 +71,17 @@
                 <p>There is lot of
                     new stuff waiting
                     for you</p>
-                <form action="index.html">
+                <form action="<?php echo base_url()?>auth" method="post">
                     <div class="form-group has-icon"><i class="icon-envelope-o"></i>
                         <input type="text" class="form-control form-control-lg"
-                               placeholder="Email Address">
+                               placeholder="Email Address" name="email">
                     </div>
                     <div class="form-group has-icon"><i class="icon-user-secret"></i>
                         <input type="password" class="form-control form-control-lg"
-                               placeholder="Password">
+                               placeholder="Password" name="password">
                     </div>
-                    <a href="<?php echo base_url() ?>dashboard/home" class="btn btn-primary btn-lg btn-block">Login</a>
+                    <input type="submit" class="btn btn-primary btn-lg btn-block" value="Login">
+                    <!-- <a href="" class="btn btn-primary btn-lg btn-block">Login</a> gua ganti makek input-->
                 </form>
             </div>
         </div>
