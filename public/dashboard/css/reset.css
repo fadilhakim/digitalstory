@@ -1,0 +1,15 @@
+.blue.accent-3 {
+	background-image: url("../img/login_wlp.jpg");
+	background-size: cover;
+}
+.btn-primary {
+	background-color: #000080;
+}
+
+.btn-primary:hover {
+	background-color: #02075d !important;
+}
+
+.indigo {
+	background-color:#000080 !important;
+}
