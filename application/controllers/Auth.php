@@ -30,6 +30,7 @@
                     redirect('Member');
                 }
             }else {
+                $this->session->set_flashdata('login_fail', 'Invalid Email or Password');
                 redirect(base_url('client/login'));
             }
         }

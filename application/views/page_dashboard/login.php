@@ -80,6 +80,12 @@
                         <input type="password" class="form-control form-control-lg"
                                placeholder="Password" name="password">
                     </div>
+                    <?php if($error = $this->session->flashdata('login_fail')) :?>
+                        <div class="alert alert-danger">
+                            <?php echo $error?>
+                        </div>
+                    <?php endif?>
+
                     <input type="submit" class="btn btn-primary btn-lg btn-block" value="Login">
                     <!-- <a href="" class="btn btn-primary btn-lg btn-block">Login</a> gua ganti makek input-->
                 </form>
