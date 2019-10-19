@@ -31,7 +31,7 @@
                 }
             }else {
                 $this->session->set_flashdata('login_fail', 'Invalid Email or Password');
-                redirect(base_url('client/login'));
+                redirect(base_url('login'));
             }
         }
     }

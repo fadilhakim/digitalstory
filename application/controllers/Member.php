@@ -5,7 +5,7 @@
         public function __construct() {
             parent::__construct();
             if ($this->session->userdata('username')=="") {
-                redirect(base_url('client/login'));
+                redirect(base_url('login'));
             }
             $this->load->helper('text');
         }
