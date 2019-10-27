@@ -58,3 +58,4 @@ $route['login'] = 'dashboard';
 $route['dashboard'] = 'dashboard/home';
 $route['dashboard/invoice'] = 'dashboard/invoice';
 $route['dashboard/invoice/detail'] = 'dashboard/detail_invoice';
+$route['dashboard/analytic'] = 'dashboard/analytic';

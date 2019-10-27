@@ -10,6 +10,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="<?= base_url();?>/public/dashboard/css/app.css">
     <link rel="stylesheet" href="<?= base_url();?>/public/dashboard/css/reset.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
 </head>
 <body class="light sidebar-mini sidebar-collapse">

@@ -31,4 +31,12 @@ class Dashboard extends CI_Controller {
 		
 		$this->load->view('layouts_dashboard/page',$content);
 	}
+	public function analytic()
+	{
+		$content['header']  = $this->load->view('layouts_dashboard/header');
+		$content['content'] = $this->load->view('page_dashboard/analytic');
+		$content['footer']  = $this->load->view('layouts_dashboard/footer');
+		
+		$this->load->view('layouts_dashboard/page',$content);
+	}
 }
