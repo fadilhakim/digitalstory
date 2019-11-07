@@ -39,11 +39,13 @@
         </div>
     </div>
 </section>
+
 <script>
-    var access_token = 'ya29.ImCpB3iDPnC3EhLIAZr0CJeK13kMNehlT3o7dHxQJYoFfunGRQuNOHSH34_Hcr5guOR65mmb_ABWgFqxA8ULNHKcbXk0T0x_bboa2fHPzwS1H5l7L1Zf6gysxlA2qItZ5kE'
+    var access_token = '<?= $gauthStore->access_token?>';
+    var view_id = '<?= $gauthStore->view_id?>'
 
     $.ajax({
-        url: 'https://www.googleapis.com/analytics/v3/data/ga?ids=ga%3A199121566&start-date=today&end-date=today&metrics=ga%3Apageviews&dimensions=ga%3ApagePath&sort=-ga%3Apageviews',
+        url: 'https://www.googleapis.com/analytics/v3/data/ga?ids=ga%3A' + view_id + '&start-date=yesterday&end-date=today&metrics=ga%3Apageviews&dimensions=ga%3ApagePath&sort=-ga%3Apageviews',
         type: 'GET',
         beforeSend: function(xhr){xhr.setRequestHeader('Authorization', 'Bearer ' + access_token);},
         success: function (data) {
@@ -60,7 +62,7 @@
         }
     });
     $.ajax({
-        url: 'https://www.googleapis.com/analytics/v3/data/realtime?ids=ga%3A199121566&metrics=rt:activeUsers',
+        url: 'https://www.googleapis.com/analytics/v3/data/realtime?ids=ga%3A' + view_id + '&metrics=rt:activeUsers',
         type: 'GET',
         beforeSend: function(xhr){xhr.setRequestHeader('Authorization', 'Bearer ' + access_token);},
         success: function (data) {

@@ -9,7 +9,6 @@
             $this->load->model('AuthModel');
         }
 
-
         public function check_login(){
             $data = array('email' => $this->input->post('email'),
 						'password' => md5($this->input->post('password'))
@@ -32,6 +31,14 @@
             }else {
                 $this->session->set_flashdata('login_fail', 'Invalid Email or Password');
                 redirect(base_url('login'));
+            }
+        }
+
+        public function googleAuth() {
+            $user = $this->AuthModel->googleUser(['email' => $this->input->post('email')]);
+            if($user->access_token && $user->access_token != $this->input->post('access_token')){
+                $result = $this->AuthModel->updateAccessToken($user->id, $this->input->post('access_token'));
+                return $this->output->set_content_type('application/json')->set_output(json_encode($result));
             }
         }
     }

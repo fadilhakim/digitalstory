@@ -54,6 +54,7 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['contact'] = 'home/contact';
 $route['auth'] = 'Auth/check_login';
+$route['auth/google_auth'] = 'auth/googleAuth';
 $route['login'] = 'dashboard';
 $route['dashboard'] = 'dashboard/home';
 $route['dashboard/invoice'] = 'dashboard/invoice';

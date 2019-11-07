@@ -10,6 +10,9 @@
     <!-- CSS -->
     <link rel="stylesheet" href="<?= base_url();?>/public/dashboard/css/app.css">
     <link rel="stylesheet" href="<?= base_url();?>/public/dashboard/css/reset.css">
+    <script src="<?= base_url();?>/public/js/ds-script.js"></script>
+    <script src="<?= base_url();?>/public/js/google-sdk.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@beta/dist/js.cookie.min.js"></script>
 
 </head>
 <body class="light sidebar-mini sidebar-collapse">
@@ -89,6 +92,9 @@
                     <input type="submit" class="btn btn-primary btn-lg btn-block" value="Login">
                     <!-- <a href="" class="btn btn-primary btn-lg btn-block">Login</a> gua ganti makek input-->
                 </form>
+                <a onclick="googleLogin()" class="btn btn-lg btn-block btn-social gplus">
+                    <i class="icon-google"></i> Login with Google
+                </a>
             </div>
         </div>
         <div class="col-md-9  height-full blue accent-3 align-self-center text-center d-none d-md-block" data-bg-repeat="false"
